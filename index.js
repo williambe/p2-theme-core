@@ -29,9 +29,13 @@ module.exports = (gulp, userConfig, tasks) => {
   if (config.drupal.enabled) {
     require('./lib/drupal')(gulp, config, tasks);
   }
+  if (config.webpack.enabled) {
+    require('./lib/webpack')(gulp, config, tasks);
+  }
   if (config.svgs.enabled) {
     require('./lib/svgs')(gulp, config, tasks);
   }
+
   /* eslint-enable global-require */
 
   // Instead of `gulp.parallel`, which is what is set in Pattern Lab Starter's `gulpfile.js`, this

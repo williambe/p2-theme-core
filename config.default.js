@@ -45,7 +45,7 @@ module.exports = {
   js: {
     enabled: true,
     src: [
-      'js/**/*.js',
+      // 'js/**/*.js',
     ],
     dest: 'dest/',
     destName: 'all.min.js',
@@ -63,6 +63,11 @@ module.exports = {
         'gulpfile.js',
       ],
     },
+  },
+  webpack: {
+    enabled: false,
+    // Be sure to create a `webpack.config.js` file ~ https://webpack.js.org/configuration/
+    // config: require('./webpack.config.js'),
   },
   patternLab: {
     enabled: false,
